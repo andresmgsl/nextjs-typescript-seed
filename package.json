@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build && next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "next build",
+    "start": "next start",
+    "server-launch": "next build && next start"
   },
   "keywords": [],
   "author": "Andres Guerrero",
