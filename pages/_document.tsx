@@ -13,7 +13,7 @@ class MyDocument extends Document {
             background: black;
             color: black;
           }
-          .box-container {
+          .title-box {
             display: none;
           }
         `}</style>

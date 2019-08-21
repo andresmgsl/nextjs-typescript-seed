@@ -26,8 +26,8 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  .box-container-2,
-  .box-container {
+  .subtitle-box,
+  .title-box {
     display: block;
     position: relative;
     height: 50px;
@@ -35,10 +35,10 @@ const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
   }
 
-  .box-container {
+  .title-box {
     height: 50px;
   }
-  .box-container-2 {
+  .subtitle-box {
     height: 25px;
   }
   
