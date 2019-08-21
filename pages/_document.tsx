@@ -8,6 +8,15 @@ class MyDocument extends Document {
         <Head>
           <link href="/static/css/style.css"></link>
         </Head>
+        <style>{`
+          body { 
+            background: black;
+            color: black;
+          }
+          .box-container {
+            display: none;
+          }
+        `}</style>
         <body>
           <Main />
           <NextScript />

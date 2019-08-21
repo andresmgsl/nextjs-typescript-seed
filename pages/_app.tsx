@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
   .box-container-2,
   .box-container {
+    display: block;
     position: relative;
     height: 50px;
     width: 220px;
