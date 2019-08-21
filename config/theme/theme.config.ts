@@ -12,7 +12,7 @@ export const themeConfig: AluxionTheme = {
             color: 'white'
         },
         h3: {
-            size: '27px'
+            size: '20px'
         }
     }
 }
