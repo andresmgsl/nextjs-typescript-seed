@@ -1,23 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Title, Subtitle } from '../utils/styled-components';
+import Link from 'next/link';
+import AnimatedLogo from "@utils/logo/logo";
 
-const MainTitle = styled(Title)`
-  background-color: ${({ theme }) => theme.colors.primary}
-`
-
-const MainSubtitle = Subtitle
-
-console.log(Title);
 
 export default class extends React.Component {
   render() {    
     return (
-      <div>
-        <MainTitle>Hola mundo</MainTitle>
-        
-        <MainSubtitle>Este es un seed inicial de NextJs con TypeScript..</MainSubtitle>
-      </div>
+      <Link href="/detalles1">
+        <div>
+          <AnimatedLogo></AnimatedLogo>
+        </div>
+      </Link>
     )
   }
 }

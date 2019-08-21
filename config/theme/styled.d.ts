@@ -8,6 +8,7 @@ declare module 'styled-components' {
       primary: string
       secondary?: string
       default?: string
+      background?: string
     }
     fonts?: {
       h1?: {

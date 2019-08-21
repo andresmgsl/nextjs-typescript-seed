@@ -2,7 +2,7 @@
   "name": "andres-app",
   "version": "1.0.0",
   "description": "Ejercicio para la empresa Aluxion.",
-  "repository": "https://andresmgsl@bitbucket.org/aluxion/andres-guerrero.git",
+  "repository": "https://bitbucket.org/aluxion/andres-guerrero.git",
   "main": "index.js",
   "scripts": {
     "dev": "next",
@@ -14,11 +14,16 @@
   "author": "Andres Guerrero",
   "license": "ISC",
   "dependencies": {
+    "@types/gsap": "^1.20.2",
     "@types/next": "^8.0.6",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^4.1.18",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-plugin-styled-components": "^1.10.6",
     "next": "^9.0.4",
+    "next-compose-plugins": "^2.2.0",
+    "next-transpile-modules": "^2.3.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^4.3.2"
