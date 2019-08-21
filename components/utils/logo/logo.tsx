@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import React from 'react';
 
 
-require('../../../static/third-party/TweenMax.min.js');
-
-
 // TODO: Add realtion between GSAP library and its @type
 declare var TimelineMax: any;
 declare var Power3: any;
