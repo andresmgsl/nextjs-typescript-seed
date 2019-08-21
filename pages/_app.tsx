@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     margin:0;
     font-family: "FreightBigPro";
   }
- 
+  
   * {
     box-sizing: border-box;
   }
@@ -53,10 +53,9 @@ const GlobalStyles = createGlobalStyle`
     margin: 10px;
     cursor: pointer;
   }
-    
 `
 
-export default class MyApp extends App {
+class MyApp extends App {
   render () {
     const { Component, pageProps } = this.props
     return (
@@ -69,3 +68,6 @@ export default class MyApp extends App {
     )
   }
 }
+
+
+export default MyApp

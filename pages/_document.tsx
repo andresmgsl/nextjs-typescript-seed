@@ -1,14 +1,14 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
 
   render() {
     return (
       <html>
         <Head>
-          
+          <link href="/static/css/style.css"></link>
         </Head>
-        <body >
+        <body>
           <Main />
           <NextScript />
 
@@ -18,3 +18,5 @@ export default class MyDocument extends Document {
     )
   }
 }
+
+export default MyDocument

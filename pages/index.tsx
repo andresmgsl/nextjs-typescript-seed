@@ -2,8 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import AnimatedLogo from "@utils/logo/logo";
 
-
-export default class extends React.Component {
+class Index extends React.Component {
   render() {    
     return (
       <Link href="/detalles1">
@@ -14,3 +13,5 @@ export default class extends React.Component {
     )
   }
 }
+
+export default Index;
