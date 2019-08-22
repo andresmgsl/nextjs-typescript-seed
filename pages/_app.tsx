@@ -25,10 +25,6 @@ const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-
-  h5 {
-    color: white;
-  }
   
 `
 

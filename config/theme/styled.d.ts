@@ -11,6 +11,10 @@ declare module 'styled-components' {
       background?: string
     }
     fonts?: {
+      navbar?:{
+        size?: string
+        color?: string
+      },
       h1?: {
         size?: string
         color?: string

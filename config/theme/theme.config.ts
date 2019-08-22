@@ -8,13 +8,17 @@ export const themeConfig: AluxionTheme = {
     },
     fonts: {
         h1: {
-            size: '0px',
+            size: '30px',
             color: 'white'
         },
         h3: {
-            size: '20px'
+            size: '28px'
+        },
+        navbar:{
+            size: '18px'
         }
-    }
+    },
+    
 }
 
 

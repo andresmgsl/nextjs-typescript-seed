@@ -13,7 +13,7 @@ const Nav = styled.nav`
     postion: fixed;
 
     span {
-        font-size: 14px;
+        font-size: 19px;
     }
 `
 const NavOpt = styled.div`
