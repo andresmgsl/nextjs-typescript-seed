@@ -26,34 +26,10 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  .subtitle-box,
-  .title-box {
-    display: block;
-    position: relative;
-    height: 50px;
-    width: 220px;
-    margin: 0 auto;
-  }
-
-  .title-box {
-    height: 50px;
-  }
-  .subtitle-box {
-    height: 25px;
+  h5 {
+    color: white;
   }
   
-  #demo {
-    position: relative;
-    width: 230px;
-    height: 50px;
-  }
-  
-  #action {
-    padding: 10px;
-    font-size: 0.875em;
-    margin: 10px;
-    cursor: pointer;
-  }
 `
 
 class MyApp extends App {

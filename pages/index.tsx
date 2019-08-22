@@ -1,15 +1,52 @@
 import React from 'react';
-import Link from 'next/link';
-import AnimatedLogo from "@utils/logo/logo";
+import AnimatedLogo from "@utils/logo/animatedLogo";
+import Home from "../components/layouts/home";
+import styled from 'styled-components';
 
-class Index extends React.Component {
+
+const IndexContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+interface IProps {
+  name: string;
+}
+interface IState {
+  showAnimatedLogo: boolean;
+}
+
+class Index extends React.Component<IProps, IState> {
+
+  constructor(props: IProps) {
+    super(props);
+    this.state = { showAnimatedLogo: true }
+  }
+
+  showHome = (): void => {
+    this.setState({
+      ...this.state,
+      showAnimatedLogo: false
+    })
+  }
+
   render() {    
+    const title='Aluxion Labs';
+    const subTitle='Agency';
     return (
-      <Link href="/detalles1">
-        <div>
-          <AnimatedLogo></AnimatedLogo>
-        </div>
-      </Link>
+        <IndexContainer>
+          
+         {this.state.showAnimatedLogo && <AnimatedLogo 
+                                            lgTitle={title} 
+                                            lgSubTitle={subTitle}
+                                            notifyNotificationEnd={this.showHome}>
+                                          </AnimatedLogo> }
+
+          {!this.state.showAnimatedLogo && <Home></Home>}
+        </IndexContainer>
     )
   }
 }
