@@ -53,35 +53,61 @@ type AnimatedLogoProps = {
 class AnimatedLogo extends React.Component<AnimatedLogoProps> {
   constructor(props: AnimatedLogoProps) {
     super(props);
-    console.log(props);
   }
 
   whenAnimationDone() {
     this.props.notifyNotificationEnd();
   }
   
+  // This's use because we need to wait for DOM full load
   componentDidMount() {
-    // This code goes here because we need to wait for DOM full load
 
-    TweenMax.set (".textMask", {scaleX:0, transformOrgin: 'left center'});
+    // TODO: with more time, this would be refact. css props, child component
+
+    // classNames
+    const textMaskClass = ".textMask",
+          titleBoxClass = ".title-box",
+          subTitleBoxClass = ".subtitle-box";
+          
+
+    // times
+    const initDelay = 1,
+          initSecondDelay = initDelay + 0.25,
+          titleInDuration = .6,
+          subTitleInDuration = titleInDuration + .1,
+          maskDuration = 1.7,
+          titleOutDuration = {
+            "short": .5,
+            "long": .9
+          },
+          subTitleOutDuration = {
+            "short": .5,
+            "long": .9
+          };
+      
+
+
+    TweenMax.set (textMaskClass, {scaleX:0, transformOrgin: 'left center'});
     let tl = new TimelineMax({onComplete:this.whenAnimationDone.bind(this)});
    
-    tl.from(".title-box",.6, {ease: Power3.easeInOut,  opacity: 0}, 1); 
-    tl.from(".title-box",.6, {ease: Power3.easeInOut, rotation: 4,  y: 40, scaleY:1.4}, 1); // both start at time: 1, for smooth animation
+    tl.from(titleBoxClass,titleInDuration, {ease: Power3.easeInOut,  opacity: 0}, initDelay); 
+    tl.from(titleBoxClass,titleInDuration, {ease: Power3.easeInOut, rotation: 4,  y: 40, scaleY:1.4}, initDelay); // both start at time: 1, for smooth animation
   
-    tl.from(".subtitle-box",.7, {ease: Power3.easeInOut, rotation: 4, opacity: 0}, 1.25); 
-    tl.from(".subtitle-box",.7, {ease: Power3.easeInOut, y: 20, scaleY:1.4}, 1.25);
+    tl.from(subTitleBoxClass,subTitleInDuration, {ease: Power3.easeInOut, rotation: 4, opacity: 0}, initSecondDelay); 
+    tl.from(subTitleBoxClass,subTitleInDuration, {ease: Power3.easeInOut, y: 20, scaleY:1.4}, initSecondDelay); // both start 0.25 s later, to add follow effect
   
-    tl.to(".textMask", 1.7, { ease: CustomEase.create("custom", "M0,0 C0.212,0 0.257,0.014 0.336,0.09 0.412,0.164 0.436,0.356 0.478,0.504 0.527,0.68 0.584,0.816 0.644,0.882 0.716,0.961 0.734,1 1,1"), scaleX:1}); // for better visualitation look at GreenSock Ease Visualizer
+    // This is the sugar. We animate the hidden mask to achive text filling effect. CustomEase extra pluging is used
+    tl.to(textMaskClass, maskDuration, { ease: CustomEase.create("custom", `M0,0 C0.212,0 0.257,0.014 0.336,0.09 0.412,0.164 0.436,0.356 0.478,0.504 0.527,0.68 0.584,0.816 0.644,0.882 0.716,0.961 0.734,1 1,1`), scaleX:1}); // for better visualitation look at GreenSock Ease Visualizer
   
-    tl.add("end", .9 + 1.5 + .3 + 1); // 0.9 + 1.5 +  0.1 extra delay
-    tl.add("end2", .9 + 1.5 + .4 + 1); // 0.9 + 1.5 +  0.1 extra delay
+    // Add some timeline tagsinitSecondDelay
+    tl.add("startFirstOutAnimation", initDelay + titleInDuration + subTitleInDuration + maskDuration + .3); //  An .3 extra delay (TODO: Rethink and refact)
+    tl.add("startSecondOutAnimation", initDelay + titleInDuration + subTitleInDuration + maskDuration + .3); // An .3 extra delay (TODO: Rethink and refact)
   
-    tl.to(".title-box",0.5, {ease: Power3.easeInOut, rotation: -3, opacity: 0, scaleY:1.1}, "end");
-    tl.to(".title-box",0.9, {ease: Power3.easeInOut, y: -100 }, "end");
+    tl.to(titleBoxClass,titleOutDuration.short, {ease: Power3.easeInOut, rotation: -3, opacity: 0, scaleY:1.1}, "startFirstOutAnimation");
+    tl.to(titleBoxClass,titleOutDuration.long, {ease: Power3.easeInOut, y: -100 }, "startFirstOutAnimation");
   
-    tl.to(".subtitle-box",0.5, {ease: Power3.easeInOut, rotation: -3, opacity: 0, scaleY:1.1}, "end2");
-    tl.to(".subtitle-box",0.9, {ease: Power3.easeInOut, y: -100 }, "end2");
+    tl.to(subTitleBoxClass,subTitleOutDuration.short, {ease: Power3.easeInOut, rotation: -3, opacity: 0, scaleY:1.1}, "startSecondOutAnimation");
+    tl.to(subTitleBoxClass,subTitleOutDuration.long, {ease: Power3.easeInOut, y: -100 }, "startSecondOutAnimation");
   
   }
 
@@ -90,7 +116,7 @@ class AnimatedLogo extends React.Component<AnimatedLogoProps> {
       <div>
         <AnimatedLogoStyle />
         <div className="title-box">
-            {/** TODO: Make widths and heights dynamic  */}
+            {/** TODO: Make widths and heights dynamic - Maybe a new child component*/}
             <svg id="animated-logo" xmlns="http://www.w3.org/2000/svg" >
               <defs>
               <clipPath id="theClipPath">

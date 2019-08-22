@@ -28,7 +28,13 @@
       ],
       "@config/*": [
         "./config/*"
-      ],      
+      ], 
+      "@layouts/*": [
+        "./components/layouts/*"
+      ], 
+      "@testdata/*": [
+        "./config/test_data/*"
+      ],                  
       "*": [
         "*"
       ]

@@ -1,6 +1,6 @@
 import React from 'react';
 import AnimatedLogo from "@utils/logo/animatedLogo";
-import Home from "../components/layouts/home";
+import Home from "@layouts/home/home";
 import styled from 'styled-components';
 
 

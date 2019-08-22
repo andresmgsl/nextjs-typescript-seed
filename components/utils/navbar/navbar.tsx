@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import FlexSpacer from "@utils/styled-components/flexSpacer"
+
 
 interface IProps {
   name?: string;
@@ -7,29 +9,48 @@ interface IProps {
 const Nav = styled.nav`
     color: white;
     display: flex;
-    padding: 5px;
+    padding: 20px 30px;
+    postion: fixed;
+
+    span {
+        font-size: 14px;
+    }
 `
 const NavOpt = styled.div`
     display: flex;
 
     div {
-       margin: 0 10px;
+       margin: 0 15px;
     }
+
+    .last {
+        margin-right:0px;
+    }
+
 `
 
-const Spacer = styled.div`
-    flex: 1;
-`
 
 
 function Navbar({}: IProps) {
     return (
         <Nav>
-            <div>Aluxion Labs</div>
-            <Spacer></Spacer>
+            <div>
+                <span>
+                    Aluxion Labs
+                </span>
+            </div>
+            <FlexSpacer></FlexSpacer>
             <NavOpt>
-                <div>Projects</div>
-                <div>About</div>
+                <div>
+                    <span>
+                        Projects
+                    </span>
+                </div>
+                <div className="last">
+                    <span>
+                        About
+                    </span>
+                </div>
             </NavOpt>
         </Nav>
     )

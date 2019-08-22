@@ -24,7 +24,7 @@ class Home extends React.Component {
   componentDidMount() {
     let tl = new TimelineMax({});
    
-    tl.from('#home-container',.7, {ease: Power3.easeInOut, y: 40, opacity:0}, 0);
+    tl.from('#home-container',.7, {ease: Power3.easeInOut, opacity:0}, 0);
   }
 
   render() {    

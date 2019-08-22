@@ -15,7 +15,10 @@ module.exports = withPlugins([
         config.resolve.alias = {
           ...config.resolve.alias,
           '@utils': path.resolve(__dirname, 'components/utils'),
-          '@config': path.resolve(__dirname, 'config')
+          '@config': path.resolve(__dirname, 'config'),
+          '@layouts': path.resolve(__dirname, 'components/layouts'),
+          '@testdata': path.resolve(__dirname, 'config/test_data')
+
         }
         return config
       }
