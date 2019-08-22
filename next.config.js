@@ -1,12 +1,12 @@
 const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules');
 const path = require('path')
-const withTypescript = require('@zeit/next-typescript')
+const withTypescript = require('@zeit/next-typescript') // remove
 
 
 module.exports = withPlugins([
   [withTM, {
-    transpileModules: [],
+    transpileModules: ["gsap"], // make a better research
   }],
   [withTypescript , {
       webpack: config => {
