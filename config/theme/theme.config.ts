@@ -15,7 +15,7 @@ export const themeConfig: AluxionTheme = {
             size: '28px'
         },
         navbar:{
-            size: '18px'
+            size: '20px'
         }
     },
     

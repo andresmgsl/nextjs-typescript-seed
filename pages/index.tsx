@@ -3,6 +3,8 @@ import AnimatedLogo from "@utils/logo/animatedLogo";
 import Home from "@layouts/home/home";
 import styled from 'styled-components';
 
+declare var TimelineMax: any;
+declare var Power2: any;
 
 const IndexContainer = styled.div`
   width: 100%;
@@ -10,6 +12,7 @@ const IndexContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 `
 
 interface IProps {
@@ -21,9 +24,17 @@ interface IState {
 
 class Index extends React.Component<IProps, IState> {
 
+  initialState: IState = { showAnimatedLogo: true }
+
   constructor(props: IProps) {
     super(props);
-    this.state = { showAnimatedLogo: true }
+    this.state = this.initialState
+  }
+
+  componentDidMount() {
+    let tl = new TimelineMax({});
+
+    tl.from('#main-index-container',.7, {ease: Power2.easeInOut, backgroundColor: 'white'}, 0);
   }
 
   showHome = (): void => {
@@ -36,8 +47,9 @@ class Index extends React.Component<IProps, IState> {
   render() {    
     const title='Aluxion Labs';
     const subTitle='Agency';
+    
     return (
-        <IndexContainer>
+        <IndexContainer id="main-index-container">
           
          {this.state.showAnimatedLogo && <AnimatedLogo 
                                             lgTitle={title} 

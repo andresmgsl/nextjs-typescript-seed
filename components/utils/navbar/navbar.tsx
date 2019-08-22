@@ -1,19 +1,22 @@
 import styled from "styled-components";
 import FlexSpacer from "@utils/styled-components/flexSpacer"
-
+import Link from 'next/link';
 
 interface IProps {
   name?: string;
 }
 
 const Nav = styled.nav`
-    color: white;
     display: flex;
     padding: 20px 30px;
-    postion: fixed;
-
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    
     span {
-        font-size: 19px;
+        font-size: 20px;
+        cursor: pointer;
     }
 `
 const NavOpt = styled.div`
@@ -35,16 +38,20 @@ function Navbar({}: IProps) {
     return (
         <Nav>
             <div>
-                <span>
-                    Aluxion Labs
-                </span>
+                <Link href="/">
+                    <span>
+                        Aluxion Labs
+                    </span>
+                </Link>
             </div>
             <FlexSpacer></FlexSpacer>
             <NavOpt>
                 <div>
-                    <span>
-                        Projects
-                    </span>
+                    <Link href="/detalles1">
+                        <span>
+                            Projects
+                        </span> 
+                    </Link>
                 </div>
                 <div className="last">
                     <span>

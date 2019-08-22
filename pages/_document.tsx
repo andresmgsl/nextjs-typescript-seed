@@ -10,8 +10,7 @@ class MyDocument extends Document {
         </Head>
         <style>{`
           body { 
-            background: black;
-            color: black;
+            color: white;
           }
           .title-box {
             display: none;

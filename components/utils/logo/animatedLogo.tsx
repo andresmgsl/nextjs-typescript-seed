@@ -72,18 +72,18 @@ class AnimatedLogo extends React.Component<AnimatedLogoProps> {
           
 
     // times
-    const initDelay = 1,
+    const initDelay = 1.2,
           initSecondDelay = initDelay + 0.25,
           titleInDuration = .6,
           subTitleInDuration = titleInDuration + .1,
-          maskDuration = 1.7,
+          maskDuration = 2,
           titleOutDuration = {
-            "short": .5,
-            "long": .9
+            "short": .6,
+            "long": 1
           },
           subTitleOutDuration = {
-            "short": .5,
-            "long": .9
+            "short": .6,
+            "long": 1
           };
       
 
