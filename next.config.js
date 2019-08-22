@@ -9,7 +9,7 @@ module.exports = withPlugins([
     transpileModules: ["gsap"], // make a better research
   }],
   [withTypescript , {
-      distDir: '_next',
+      distDir: '.next',
       webpack: config => {
         config.plugins = config.plugins || []
     
