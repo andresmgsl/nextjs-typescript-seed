@@ -12,6 +12,28 @@ declare module 'styled-components' {
       lightGray?: string
       gray?: string
     }
+    device?:{
+      mobileS?: string
+      mobileM?: string
+      mobileL?: string
+      tablet?: string
+      laptop?: string
+      laptopL?: string
+      desktop?: string
+      desktopL?: string
+    }
+    resposive?: {
+      font: {
+        mobileS?: string
+        mobileM?: string
+        mobileL?: string
+        tablet?: string
+        laptop?: string
+        laptopL?: string
+        desktop?: string
+        desktopL?: string
+      }
+    }
     fonts?: {
       navbar?:{
         size?: string

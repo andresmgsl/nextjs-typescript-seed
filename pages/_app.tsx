@@ -3,6 +3,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { Transition, TransitionGroup } from 'react-transition-group';
 
 import { themeConfig } from '@config/theme/theme.config';
+import { device } from '@config/theme/breakpoints';
 import { MainContainer} from '@utils/styled-components/index';
 
 declare var TweenMax: any;
@@ -31,6 +32,7 @@ const GlobalStyles = createGlobalStyle`
   
 `
 
+theme.device = device;
 
 
 class MyApp extends App {

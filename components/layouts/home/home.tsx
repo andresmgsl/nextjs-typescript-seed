@@ -10,7 +10,7 @@ declare var TimelineMax: any;
 declare var Power4: any;
 
 const BigTitleLogo = styled(TitleLogo)`
-  font-size: 115px;
+  font-size: 50px;
   cursor: pointer;
   text-align: center;
 
@@ -25,6 +25,18 @@ const BigTitleLogo = styled(TitleLogo)`
     transform: scale(1.1) !important;
   }
 
+  @media ${({ theme }) => theme.device.mobileS} { 
+    font-size: 60px;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    font-size: 80px;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    font-size: 115px;
+  }
+
 `
 const ShowImageBox = styled.div`
   width: 430px;
@@ -36,6 +48,21 @@ const ShowImageBox = styled.div`
   top: 0;
   bottom: 0;
   background-size: cover;
+
+  @media ${({ theme }) => theme.device.mobileS} { 
+    width: 340px;
+    height: 260px;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    width: 360px;
+    height: 270px;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 430px;
+    height: 300px;
+  }
 
 `
 
@@ -54,7 +81,7 @@ const HomeContainer = styled.div`
   }
 
   #home-opts-container {
-    margin-top: 15%;
+    margin-top: 75%;
   }
 
   #home-main-image-container {
@@ -65,6 +92,48 @@ const HomeContainer = styled.div`
     height: 430px;
     width: 300px;
   }
+
+
+  @media ${({ theme }) => theme.device.mobileS} { 
+    #home-opts-container {
+      margin-top: 70%;
+    }
+
+    #home-main-image-container.portrait {
+      height: 320px;
+      width: 240px;
+    }
+
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} {
+    #home-opts-container {
+      margin-top: 50%;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    #home-opts-container {
+      margin-top: 35%;
+    }
+
+    #home-main-image-container.portrait {
+      height: 360px;
+      width: 270px;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    #home-opts-container {
+      margin-top: 15%;
+    }
+
+    #home-main-image-container.portrait {
+      height: 430px;
+      width: 300px;
+    }
+  }
+
 
 `
 

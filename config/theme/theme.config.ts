@@ -20,6 +20,18 @@ export const themeConfig: AluxionTheme = {
             size: '20px'
         }
     },
+    resposive: {
+        font: {
+            mobileS: '16px',
+            mobileM: '16px',
+            mobileL: '16px',
+            tablet: '16px',
+            laptop: '16px',
+            laptopL: '16px',
+            desktop: '16px',
+            desktopL: '16px'
+        }
+    }
     
 }
 
