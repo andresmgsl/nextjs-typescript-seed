@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import { FlexSpacer } from "@utils/styled-components/index"
 import Link from 'next/link';
 
-interface IProps {
-  name?: string;
-}
+import { FlexSpacer } from '@utils/styled-components/index'
+import HamburgerIcon from '../hamburger/hamburger'
 
 const Nav = styled.nav`
     display: flex;
@@ -18,20 +16,38 @@ const Nav = styled.nav`
         font-size: 20px;
         cursor: pointer;
     }
+
+    #mobile-menu-navigation {
+        display: block;
+    }
+
+    @media ${({ theme }) => theme.device.tablet} {
+        #mobile-menu-navigation {
+            display: none;
+        }
+    }
 `
 const NavOpt = styled.div`
-    display: flex;
+    display: none;
 
     div {
        margin: 0 15px;
     }
+   
+    @media ${({ theme }) => theme.device.tablet} {
+        display: flex;
 
+    }
 
 `
 
+interface IProps {
+    hamburColor?: string;
+}
 
 
-function Navbar({}: IProps) {
+
+function Navbar({ hamburColor }: IProps) {
     return (
         <Nav>
             <div>
@@ -42,12 +58,15 @@ function Navbar({}: IProps) {
                 </Link>
             </div>
             <FlexSpacer></FlexSpacer>
-            <NavOpt>
+            <div style={{ marginTop: "3px" }} id="mobile-menu-navigation">
+                <HamburgerIcon color={hamburColor}></HamburgerIcon>
+            </div>
+            <NavOpt id="normal-menu-navigation">
                 <div>
                     <Link href="/detalles1">
                         <span>
                             Projects
-                        </span> 
+                        </span>
                     </Link>
                 </div>
                 <div className="last">
@@ -55,9 +74,11 @@ function Navbar({}: IProps) {
                         About
                     </span>
                 </div>
+
+
             </NavOpt>
         </Nav>
     )
-} 
+}
 
 export default Navbar;

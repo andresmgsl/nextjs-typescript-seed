@@ -22,14 +22,14 @@ const MiddleBox = styled.div`
   }
 
   #image-1.first {
-    padding: 90px;
+    padding: 0px;
 
     margin-top: 700px;
     padding-right: 50px;
   }
 
   #image-2.second {
-    padding: 90px;
+    padding: 0px;
 
     margin-top: 130px;
     padding-right: 0px;
@@ -46,6 +46,65 @@ const MiddleBox = styled.div`
     padding-left: 10px;
   }
 
+
+  @media ${({ theme }) => theme.device.mobileS} { 
+    margin-bottom:20px;
+    #image-1.first {
+  
+      margin-top: 100px;
+      padding-right: 10px;
+    }
+  
+    #image-2.second {
+  
+      margin-top: 30px;
+      padding-right: 0px;
+      padding-left: 10px;
+    }
+  
+    #image-3.first {
+      flex: 7;
+      padding-right: 10px;
+    }
+  
+    #image-4.second {
+      flex: 3;
+      padding-left: 10px;
+    }    
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} { 
+      margin-bottom:30px;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+      margin-bottom:40px;
+      
+      #image-1.first {
+        padding: 0px;
+    
+        margin-top: 700px;
+        padding-right: 50px;
+      }
+    
+      #image-2.second {
+        padding: 0px;
+    
+        margin-top: 130px;
+        padding-right: 0px;
+        padding-left: 120px;
+      }
+    
+      #image-3.first {
+        flex: 7;
+        padding-right: 10px;
+      }
+    
+      #image-4.second {
+        flex: 3;
+        padding-left: 10px;
+      }      
+  }
 `
 
 const DetallesContainer = styled.div`
@@ -70,16 +129,47 @@ const DetallesContainer = styled.div`
     margin-top: 10px;
   }
 
+
+
+  @media ${({ theme }) => theme.device.mobileS} { 
+    #transparent-box {
+      height: 220px;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.laptop} { 
+    #transparent-box {
+      height: 460px;
+    }
+  }
+
 `
 
 const BigText = styled(TitleLogo)`
-  font-size: 300px;
+  font-size: 70px;
   color: ${({ theme }) => theme.colors.lightGray};
   top: 100px;
   width: 100%;
   position: fixed;
   z-index: 1;
   padding: 0 20px;
+
+  @media ${({ theme }) => theme.device.mobileS} { 
+    font-size: 100px;
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} { 
+    font-size: 120px;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    font-size: 180px;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    font-size: 260px;
+  } 
+
 `
 
 const BasicContainerInst = styled(BasicContainer)`
@@ -96,8 +186,7 @@ const TranspartenBoxStyle = {
    position: 'relative' as 'relative',
    marginTop: '50px', 
    zIndex: 10, 
-   width: '100%', 
-   height:'460px'
+   width: '100%'
 }
 
 const CustomMiddleBoxStyle = {
@@ -123,7 +212,7 @@ class Detalles1 extends React.Component {
   render() {    
     return (
         <DetallesContainer id="detalles1-main">
-          <Navbar />
+          <Navbar hamburColor="black"/>
           <div id='detalles1-container'>
             <div id="detalles1-layout">
               {/** This is for avoid "freeze scroll" when hover a fixed element (BigText Duox) */}

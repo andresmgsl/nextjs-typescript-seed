@@ -5,7 +5,7 @@ export const themeConfig: AluxionTheme = {
         primary: 'yellow',
         default: '#575757',
         background: 'black',
-        lightGray: '#f2f2f2',
+        lightGray: '#ebebeb',
         gray: '#a6a6a6'
     },
     fonts: {

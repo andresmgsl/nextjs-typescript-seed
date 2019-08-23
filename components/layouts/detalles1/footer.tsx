@@ -15,7 +15,6 @@ const FooterBody = styled.div`
 
     img {
         opacity: 0.6;
-        margin-top: 100px;
     }
 
     p {
@@ -24,6 +23,30 @@ const FooterBody = styled.div`
         margin: 0;
         margin-top: 10px;
     }
+
+    @media ${({ theme }) => theme.device.mobileS} { 
+        img {
+            margin-top:20px;
+        }
+    }
+
+    @media ${({ theme }) => theme.device.mobileM} { 
+        img {
+            margin-top:40px;
+        }
+    }
+
+    @media ${({ theme }) => theme.device.mobileL} {
+        img {
+            margin-top:60px;
+        }
+    }
+
+    @media ${({ theme }) => theme.device.tablet} {
+        img {
+            margin-top:100px;
+        }
+    }    
 `
 
 const BigText = styled(TitleLogo)`
@@ -34,6 +57,22 @@ const BigText = styled(TitleLogo)`
   padding: 0 20px;
   position: absolute;
   opacity: 0.2;
+
+  @media ${({ theme }) => theme.device.mobileS} { 
+    font-size: 100px;
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} { 
+    font-size: 120px;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    font-size: 180px;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    font-size: 260px;
+  }  
 `
 
 

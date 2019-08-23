@@ -14,13 +14,13 @@ const BigTitleLogo = styled(TitleLogo)`
   cursor: pointer;
   text-align: center;
 
-  div {
+  span {
     color: ${({ theme }) => theme.colors.default};
     transform: scale(1);
 
     transition: all 0.3s ease;
   }
-  div:hover {
+  span:hover {
     color: white;
     transform: scale(1.1) !important;
   }
@@ -194,7 +194,7 @@ class Home extends React.Component<IProps, IState> {
   render() {    
     return (
         <HomeContainer>
-          <Navbar />
+          <Navbar hamburColor="white" />
           <div id='home-container'>
 
             <ShowImageBox id='home-main-image-container' className={this.state.image == '3084359-480.jpg' ? 'portrait' : 'landscape'} style={{backgroundImage: 'url("/static/images/Home/' + this.state.image + '")'}}></ShowImageBox>
@@ -206,50 +206,50 @@ class Home extends React.Component<IProps, IState> {
             <div id='home-opts-container' onMouseEnter={this.handleOptsMouseOver.bind(this)} onMouseLeave={this.handleMouseOut.bind(this)}>
               <Link href='/detalles1'>
                 <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '6db0215-720.jpg'])} className='home-title'>
-                  <div>
+                  <span>
                     Duox
-                  </div>
+                  </span>
                   </BigTitleLogo>
               </Link>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '96e5535-720.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Drake
-                </div>
+                </span>
                 </BigTitleLogo>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '725127e-720.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Gaga
-                </div>
+                </span>
                 </BigTitleLogo>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '86174c1-720.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Eminem
-                </div>
+                </span>
                 </BigTitleLogo>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '390c2a9-480.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Sia
-                </div>
+                </span>
                 </BigTitleLogo>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '958e114-480.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Gustav
-                </div>
+                </span>
                 </BigTitleLogo>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '3084359-480.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Adidas
-                </div>
+                </span>
                 </BigTitleLogo>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '25ae41f-480.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Places
-                </div>
+                </span>
                 </BigTitleLogo>
               <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, 'ecf98a4-480.jpg'])} className='home-title'>
-                <div>
+                <span>
                   Videos
-                </div>
+                </span>
                 </BigTitleLogo>
             </div>
           </div>

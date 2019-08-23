@@ -8,13 +8,30 @@ const Nav = styled.nav`
     z-index: 10;
     color: black;
     justify-content: center;
-    margin-bottom:50px;
+    margin-bottom:10px;
     padding-top: 0px;
     position: relative;
 
     span {
         font-size: 22px;
     }
+
+    @media ${({ theme }) => theme.device.mobileS} { 
+        margin-bottom:20px;
+    }
+
+    @media ${({ theme }) => theme.device.mobileM} { 
+        margin-bottom:30px;
+    }
+
+    @media ${({ theme }) => theme.device.mobileL} {
+        margin-bottom:40px;
+    }
+
+    @media ${({ theme }) => theme.device.tablet} {
+        margin-bottom:50px;
+    }
+
 `
 const NavOpt = styled.div`
     display: flex;
@@ -39,14 +56,14 @@ const NavOpt = styled.div`
 function DetailNavbar() {
     return (
         <Nav>
-             <NavOpt>
+            <NavOpt>
                 <div>
                     <small>
                         prueba
                     </small>
                     <span>
                         Teseo
-                    </span> 
+                    </span>
                 </div>
                 <div>
                     <small>
@@ -63,7 +80,7 @@ function DetailNavbar() {
                     <span>
                         Perseo
                     </span>
-                </div>  
+                </div>
                 <div>
                     <small>
                         prueba
@@ -71,7 +88,7 @@ function DetailNavbar() {
                     <span>
                         Jason
                     </span>
-                </div> 
+                </div>
                 <div>
                     <small>
                         prueba
@@ -79,10 +96,10 @@ function DetailNavbar() {
                     <span>
                         Ulises
                     </span>
-                </div>                                                 
+                </div>
             </NavOpt>
         </Nav>
     )
-} 
+}
 
 export default DetailNavbar;

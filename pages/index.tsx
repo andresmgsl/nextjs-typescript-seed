@@ -68,12 +68,12 @@ class Index extends React.Component<IProps, IState> {
           <PreloadImg className="preload-image-hidden" src="/static/images/Home/3084359-480.jpg"></PreloadImg>
           <PreloadImg className="preload-image-hidden" src="/static/images/Home/ecf98a4-480.jpg"></PreloadImg>
 
-          <PreloadImg className="preload-image-hidden" src="/static/images/Detalles1/1358c9b-1500.jpg"></PreloadImg>
-          <PreloadImg className="preload-image-hidden" src="/static/images/Detalles1/37966b6-1000.jpg"></PreloadImg>
-          <PreloadImg className="preload-image-hidden" src="/static/images/Detalles1/07fa4ad-1000.jpg"></PreloadImg>
-          <PreloadImg className="preload-image-hidden" src="/static/images/Detalles1/8d6db96-1500.jpg"></PreloadImg>
-          <PreloadImg className="preload-image-hidden" src="/static/images/Detalles1/355f115-1000.jpg"></PreloadImg>
-          <PreloadImg className="preload-image-hidden" src="/static/images/Detalles1/7d7650d-1500.jpg"></PreloadImg>
+          <PreloadImg className="preload-image-hidden" src="/static/images/Detalle1/1358c9b-1500.jpg"></PreloadImg>
+          <PreloadImg className="preload-image-hidden" src="/static/images/Detalle1/37966b6-1000.jpg"></PreloadImg>
+          <PreloadImg className="preload-image-hidden" src="/static/images/Detalle1/07fa4ad-1000.jpg"></PreloadImg>
+          <PreloadImg className="preload-image-hidden" src="/static/images/Detalle1/8d6db96-1500.jpg"></PreloadImg>
+          <PreloadImg className="preload-image-hidden" src="/static/images/Detalle1/355f115-1000.jpg"></PreloadImg>
+          <PreloadImg className="preload-image-hidden" src="/static/images/Detalle1/7d7650d-1500.jpg"></PreloadImg>
 
 
           <PreloadImg className="preload-image-hidden" src="/static/images/Detalle2/96e5535-720.jpg"></PreloadImg>
