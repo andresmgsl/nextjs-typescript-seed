@@ -11,9 +11,19 @@ declare var Power4: any;
 
 const BigTitleLogo = styled(TitleLogo)`
   font-size: 115px;
-  color: ${({ theme }) => theme.colors.default};
   cursor: pointer;
   text-align: center;
+
+  div {
+    color: ${({ theme }) => theme.colors.default};
+    transform: scale(1);
+
+    transition: all 0.3s ease;
+  }
+  div:hover {
+    color: white;
+    transform: scale(1.1) !important;
+  }
 
 `
 const ShowImageBox = styled.div`
@@ -126,16 +136,52 @@ class Home extends React.Component<IProps, IState> {
               */}
             <div id='home-opts-container' onMouseEnter={this.handleOptsMouseOver.bind(this)} onMouseLeave={this.handleMouseOut.bind(this)}>
               <Link href='/detalles1'>
-                <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '6db0215-720.jpg'])} className='home-title'>Duox</BigTitleLogo>
+                <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '6db0215-720.jpg'])} className='home-title'>
+                  <div>
+                    Duox
+                  </div>
+                  </BigTitleLogo>
               </Link>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '96e5535-720.jpg'])} className='home-title'>Drake</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '725127e-720.jpg'])} className='home-title'>Gaga</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '86174c1-720.jpg'])} className='home-title'>Eminem</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '390c2a9-480.jpg'])} className='home-title'>Sia</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '958e114-480.jpg'])} className='home-title'>Gustav</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '3084359-480.jpg'])} className='home-title'>Adidas</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '25ae41f-480.jpg'])} className='home-title'>Places</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, 'ecf98a4-480.jpg'])} className='home-title'>Videos</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '96e5535-720.jpg'])} className='home-title'>
+                <div>
+                  Drake
+                </div>
+                </BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '725127e-720.jpg'])} className='home-title'>
+                <div>
+                  Gaga
+                </div>
+                </BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '86174c1-720.jpg'])} className='home-title'>
+                <div>
+                  Eminem
+                </div>
+                </BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '390c2a9-480.jpg'])} className='home-title'>
+                <div>
+                  Sia
+                </div>
+                </BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '958e114-480.jpg'])} className='home-title'>
+                <div>
+                  Gustav
+                </div>
+                </BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '3084359-480.jpg'])} className='home-title'>
+                <div>
+                  Adidas
+                </div>
+                </BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '25ae41f-480.jpg'])} className='home-title'>
+                <div>
+                  Places
+                </div>
+                </BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, 'ecf98a4-480.jpg'])} className='home-title'>
+                <div>
+                  Videos
+                </div>
+                </BigTitleLogo>
             </div>
           </div>
         </HomeContainer>

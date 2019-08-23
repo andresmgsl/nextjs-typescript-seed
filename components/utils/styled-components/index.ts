@@ -2,6 +2,13 @@ import { TitleLogo }  from './title';
 import { Subtitle }  from './subtitle';
 import { Buttonlux }  from './button';
 import { MainContainer }  from './mainContainer';
-import { FlexSpacer }  from './flexSpacer';
+import { BasicContainer }  from './basicContainer';
+import { ImageContainer }  from './imageContainer';
 
-export { MainContainer, Subtitle, TitleLogo, Buttonlux, FlexSpacer};
+// TODO Refact into a small library
+import { FlexContainer }  from './flex/flexContainer';
+import { FlexSpacer }  from './flex/flexSpacer';
+
+
+
+export { MainContainer, BasicContainer, ImageContainer, Subtitle, TitleLogo, Buttonlux, FlexSpacer, FlexContainer};

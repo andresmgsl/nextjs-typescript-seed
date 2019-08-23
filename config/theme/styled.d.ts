@@ -9,6 +9,8 @@ declare module 'styled-components' {
       secondary?: string
       default?: string
       background?: string
+      lightGray?: string
+      gray?: string
     }
     fonts?: {
       navbar?:{

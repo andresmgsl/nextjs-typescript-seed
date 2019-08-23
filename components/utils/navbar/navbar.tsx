@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FlexSpacer } from "@utils/styled-components/flexSpacer"
+import { FlexSpacer } from "@utils/styled-components/index"
 import Link from 'next/link';
 
 interface IProps {
@@ -12,7 +12,7 @@ const Nav = styled.nav`
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     
     span {
         font-size: 20px;
@@ -26,9 +26,6 @@ const NavOpt = styled.div`
        margin: 0 15px;
     }
 
-    .last {
-        margin-right:0px;
-    }
 
 `
 
