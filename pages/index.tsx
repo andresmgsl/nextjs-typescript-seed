@@ -58,15 +58,15 @@ class Index extends React.Component<IProps, IState> {
         <IndexContainer id="main-index-container">
           
         {/** Preload image while animateLogo is runing */}
-        <PreloadImg src="/static/images/Home/6db0215-720.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/25ae41f-480.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/96e5535-720.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/390c2a9-480.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/958e114-480.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/86174c1-720.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/725127e-720.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/3084359-480.jpg"></PreloadImg>
-        <PreloadImg src="/static/images/Home/ecf98a4-480.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/6db0215-720.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/25ae41f-480.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/96e5535-720.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/390c2a9-480.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/958e114-480.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/86174c1-720.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/725127e-720.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/3084359-480.jpg"></PreloadImg>
+        <PreloadImg className="preload-image-hidden" src="/static/images/Home/ecf98a4-480.jpg"></PreloadImg>
 
 
          {this.state.showAnimatedLogo && <AnimatedLogo 

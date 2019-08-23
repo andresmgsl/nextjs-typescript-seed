@@ -12,6 +12,7 @@ class MyDocument extends Document {
           body { 
             color: white;
           }
+          .preload-image-hidden,
           .title-box {
             display: none;
           }
