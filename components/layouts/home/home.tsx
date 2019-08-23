@@ -25,6 +25,7 @@ const ShowImageBox = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
+  background-size: cover;
 
 `
 
@@ -46,8 +47,13 @@ const HomeContainer = styled.div`
     margin-top: 15%;
   }
 
-  #home-main-image-container{
+  #home-main-image-container {
     opacity: 0;
+  }
+
+  #home-main-image-container.portrait {
+    height: 430px;
+    width: 300px;
   }
 
 `
@@ -60,7 +66,7 @@ interface IState {
 }
 
 class Home extends React.Component<IProps, IState> {
-  initialState: IState = { image: "6db0215-720.jpg" }
+  initialState: IState = { image: '6db0215-720.jpg' }
   tlImageBoxIn: any
   tlImageBoxOut: any
 
@@ -112,24 +118,24 @@ class Home extends React.Component<IProps, IState> {
           <Navbar />
           <div id='home-container'>
 
-            <ShowImageBox id="home-main-image-container" style={{backgroundImage: "url('/static/images/Home/" + this.state.image + "')"}}></ShowImageBox>
+            <ShowImageBox id='home-main-image-container' className={this.state.image == '3084359-480.jpg' ? 'portrait' : 'landscape'} style={{backgroundImage: 'url("/static/images/Home/' + this.state.image + '")'}}></ShowImageBox>
 
             {/** 
               TODO: Refact using something like "Angular *ngFor" in React 
                     and iterate an object
               */}
-            <div id="home-opts-container" onMouseEnter={this.handleOptsMouseOver.bind(this)} onMouseLeave={this.handleMouseOut.bind(this)}>
-              <Link href="/detalles1">
-                <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "6db0215-720.jpg"])} className="home-title">Duox</BigTitleLogo>
+            <div id='home-opts-container' onMouseEnter={this.handleOptsMouseOver.bind(this)} onMouseLeave={this.handleMouseOut.bind(this)}>
+              <Link href='/detalles1'>
+                <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '6db0215-720.jpg'])} className='home-title'>Duox</BigTitleLogo>
               </Link>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "25ae41f-480.jpg"])} className="home-title">Drake</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "96e5535-720.jpg"])} className="home-title">Gaga</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "390c2a9-480.jpg"])} className="home-title">Eminem</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "958e114-480.jpg"])} className="home-title">Sia</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "86174c1-720.jpg"])} className="home-title">Gustav</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "725127e-720.jpg"])} className="home-title">Adidas</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "3084359-480.jpg"])} className="home-title">Places</BigTitleLogo>
-              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, "ecf98a4-480.jpg"])} className="home-title">Videos</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '96e5535-720.jpg'])} className='home-title'>Drake</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '725127e-720.jpg'])} className='home-title'>Gaga</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '86174c1-720.jpg'])} className='home-title'>Eminem</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '390c2a9-480.jpg'])} className='home-title'>Sia</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '958e114-480.jpg'])} className='home-title'>Gustav</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '3084359-480.jpg'])} className='home-title'>Adidas</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, '25ae41f-480.jpg'])} className='home-title'>Places</BigTitleLogo>
+              <BigTitleLogo onMouseEnter={this.handleMouseOver.bind([this, 'ecf98a4-480.jpg'])} className='home-title'>Videos</BigTitleLogo>
             </div>
           </div>
         </HomeContainer>
