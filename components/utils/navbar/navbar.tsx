@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import FlexSpacer from "@utils/styled-components/flexSpacer"
+import { FlexSpacer } from "@utils/styled-components/flexSpacer"
 import Link from 'next/link';
 
 interface IProps {

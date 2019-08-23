@@ -7,4 +7,4 @@ margin: 0;
 font-weight: 200;
 `
 
-export default TitleLogo;
+export {TitleLogo};

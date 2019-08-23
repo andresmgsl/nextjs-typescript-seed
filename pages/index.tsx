@@ -31,13 +31,14 @@ class Index extends React.Component<IProps, IState> {
     this.state = this.initialState
   }
 
+  //Initial animation when enter
   componentDidMount() {
     let tl = new TimelineMax({});
-
     tl.from('#main-index-container',.7, {ease: Power2.easeInOut, backgroundColor: 'white'}, 0);
   }
 
-  showHome = (): void => {
+  // After logo animation completes, show Home component
+  showHome(): void {
     this.setState({
       ...this.state,
       showAnimatedLogo: false
@@ -54,7 +55,7 @@ class Index extends React.Component<IProps, IState> {
          {this.state.showAnimatedLogo && <AnimatedLogo 
                                             lgTitle={title} 
                                             lgSubTitle={subTitle}
-                                            notifyNotificationEnd={this.showHome}>
+                                            notifyNotificationEnd={this.showHome.bind(this)}>
                                           </AnimatedLogo> }
 
           {!this.state.showAnimatedLogo && <Home></Home>}

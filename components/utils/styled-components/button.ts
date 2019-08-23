@@ -5,4 +5,4 @@ const Buttonlux = styled.button`
   color: ${({ theme }) => theme.colors.default};
 `
 
-export default Buttonlux;
+export { Buttonlux };
