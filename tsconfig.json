@@ -33,7 +33,7 @@
         "./components/layouts/*"
       ], 
       "@testdata/*": [
-        "./config/test_data/*"
+        "./config/data/*"
       ],                  
       "*": [
         "*"

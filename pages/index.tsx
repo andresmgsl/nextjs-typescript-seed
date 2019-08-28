@@ -1,24 +1,11 @@
 import React from 'react';
 import AnimatedLogo from "@utils/logo/animatedLogo";
 import Home from "@layouts/home/home";
-import styled from 'styled-components';
+import { PreloadImg, IndexContainer } from "@layouts/home/utils.page";
 
 declare var TimelineMax: any;
 declare var Power2: any;
 
-const PreloadImg = styled.img`
-  display: none;
-  opacity: 0;
-`
-
-const IndexContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-`
 
 interface IProps {
   name: string;
@@ -77,15 +64,7 @@ class Index extends React.Component<IProps, IState> {
 
 
           <PreloadImg className="preload-image-hidden" src="/static/images/Detalle2/96e5535-720.jpg"></PreloadImg>
-
-          
-
-        
-        
-        
-        
-        
-        
+   
 
           {/** First run the animatedLogo, then show Home */}
           {this.state.showAnimatedLogo && <AnimatedLogo 

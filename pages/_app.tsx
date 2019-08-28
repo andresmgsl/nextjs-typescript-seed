@@ -1,6 +1,6 @@
 import App from 'next/app'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import { Transition, TransitionGroup } from 'react-transition-group';
+
 
 import { themeConfig } from '@config/theme/theme.config';
 import { device } from '@config/theme/breakpoints';
@@ -45,21 +45,15 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={theme}>
-        <TransitionGroup>
-          <Transition 
-            timeout={{
-                    enter: 0, // TODO: refact and understeen
-                    exit: 0
-                  }}
-                >
+
             <MainContainer className="main-container">
               <GlobalStyles />
 
               <Component {...pageProps} />
 
             </MainContainer>
-          </Transition>
-        </TransitionGroup>
+
+
       </ThemeProvider>
     )
   }

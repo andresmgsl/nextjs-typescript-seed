@@ -1,13 +1,6 @@
 import Detalles1 from "@layouts/detalles1/detalles1";
-import styled from 'styled-components';
+import { Detalles1Container } from "@layouts/detalles1/utils.page";
 
-const Detalles1Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 
 const AnimatedLogo = () => (
     <Detalles1Container>

@@ -6,7 +6,7 @@ const withTypescript = require('@zeit/next-typescript') // remove
 
 module.exports = withPlugins([
   [withTM, {
-    transpileModules: ["gsap"], // make a better research
+    transpileModules: ["gsap"], // TODO: make a better research of this.
   }],
   [withTypescript , {
       distDir: '.next',

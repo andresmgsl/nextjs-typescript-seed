@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from 'next/link';
 
 import { FlexSpacer } from '@utils/styled-components/index'
-import HamburgerIcon from '../hamburger/hamburger'
+import HamburgerIcon from '@utils/hamburger/hamburger'
 
 const Nav = styled.nav`
     display: flex;
@@ -63,19 +63,15 @@ function Navbar({ hamburColor }: IProps) {
             </div>
             <NavOpt id="normal-menu-navigation">
                 <div>
-                    <Link href="/detalles1">
-                        <span>
-                            Projects
-                        </span>
-                    </Link>
+                    <span>
+                        Projects
+                    </span>
                 </div>
                 <div className="last">
                     <span>
                         About
                     </span>
                 </div>
-
-
             </NavOpt>
         </Nav>
     )
